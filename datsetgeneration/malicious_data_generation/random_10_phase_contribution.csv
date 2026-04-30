@@ -1,0 +1,2 @@
+attack_type,malicious_ratio,total_malicious,mal_caught_phase1,mal_passed_phase1,mal_caught_phase2,mal_final_caught,phase1_malicious_recall,final_malicious_recall,phase2_catch_after_phase1_pass,phase1_fp_rate,final_fp_rate
+random,0.1,54720,46194,8526,8516,54710,0.844188596491228,0.9998172514619883,0.9988271170537181,0.28539839181286547,0.8193754061078623
