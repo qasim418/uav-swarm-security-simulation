@@ -1,25 +1,26 @@
 # UAV Swarm Security Simulation
 
-Simulation-based UAV swarm security framework using GPS/RSSI mismatch detection, GRiFFIN-style Phase 1 / Phase 2 verification, and SAC-based adaptive threshold learning.
+Simulation-based UAV swarm security: GPS/RSSI mismatch (Phase 1), GRiFFIN-style jury verification (Phase 2), and SAC adaptive thresholds.
 
-## Project Overview
+## Ownership (important)
 
-- **Phase 1:** GPS vs RSSI distance mismatch with a detection threshold
-- **Phase 2:** Jury / geometric verification (GRiFFIN-style)
-- **RL (SAC):** Learn a dynamic Phase 1 threshold across environments and formations
-- **Evaluation:** Static vs SAC threshold comparisons and attack-scenario MATLAB tests
+See [`OWNERSHIP.md`](OWNERSHIP.md) for the full map. Short version:
 
-## Repository Structure
+- **Phase 1 (Qasim):** `code/finalcode.py`, `data/`, `models/`, `results/`, `figures/`
+- **Phase 2 final (Faraz):** `Matlab/`
+- **Early Phase 2 / RL CSV gen (Qasim):** `datsetgeneration/` (kept for history/data gen, not final Phase 2)
+
+## Repository structure
 
 ```text
-archive/           Earlier RL runs and archived models
-code/              SAC training/eval scripts and notebooks (see finalcode.py)
-data/              Detection and RL datasets
-datsetgeneration/  MATLAB dataset generation + Phase 2 malicious-data pipelines
-Matlab/            Faraz Phase 2 attack scenarios, On/Off, gradual activation, plots
-figures/           Paper-style figures
-models/            Trained SAC models and exports
-results/           Evaluation summaries and metrics
+OWNERSHIP.md       Who owns Phase 1 vs Phase 2
+code/              SAC training/eval (Phase 1)
+data/              Detection + RL datasets
+models/            Trained SAC models
+results/ figures/  Phase 1 evaluation outputs
+Matlab/            Finalized Phase 2 GRiFFIN sims + plots (Faraz)
+datsetgeneration/  Early Phase 2 + RL dataset generation (Qasim)
+archive/           Older runs + Faraz Phase 1 notebook for review
 ```
 
 ## Remotes
