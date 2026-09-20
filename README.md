@@ -1,23 +1,30 @@
-# Swarm UAV Security Simulation
+# UAV Swarm Security Simulation
 
-A simulation-based project focused on **UAV swarm coordination, security, and reinforcement learning**. This repository explores how multiple unmanned aerial vehicles (UAVs) operate as a swarm while analyzing performance, threat resilience, and intelligent decision-making using AI techniques.
+Simulation-based UAV swarm security framework using GPS/RSSI mismatch detection, GRiFFIN-style Phase 1 / Phase 2 verification, and SAC-based adaptive threshold learning.
 
 ## Project Overview
 
-The project investigates:
-
-- UAV swarm communication and coordination
-- Security challenges in drone swarms
-- Reinforcement Learning based control strategies
-- Performance evaluation using simulation results
-- Autonomous swarm behavior under dynamic conditions
+- **Phase 1:** GPS vs RSSI distance mismatch with a detection threshold
+- **Phase 2:** Jury / geometric verification (GRiFFIN-style)
+- **RL (SAC):** Learn a dynamic Phase 1 threshold across environments and formations
+- **Evaluation:** Static vs SAC threshold comparisons and attack-scenario MATLAB tests
 
 ## Repository Structure
 
 ```text
-archive/        Previous files and experiments
-code/           Source code and simulation scripts
-data/           Input datasets / training data
-figures/        Graphs, plots, and visual outputs
-models/         Trained AI / RL models
-results/        Final evaluation results
+archive/           Earlier RL runs and archived models
+code/              SAC training/eval scripts and notebooks (see finalcode.py)
+data/              Detection and RL datasets
+datsetgeneration/  MATLAB dataset generation + Phase 2 malicious-data pipelines
+Matlab/            Faraz Phase 2 attack scenarios, On/Off, gradual activation, plots
+figures/           Paper-style figures
+models/            Trained SAC models and exports
+results/           Evaluation summaries and metrics
+```
+
+## Remotes
+
+- Primary: `origin` → https://github.com/qasim418/uav-swarm-security-simulation.git
+- Collaborator backup: `collaborator` → https://github.com/MFARAZ24/Swarm-UAV-Security.git
+
+New work should land on feature branches against `origin`.
